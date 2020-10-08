@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+
+    @*Social icon css*@
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/StyleSheet.css")
+    @Scripts.Render("~/Scripts/jquery-3.4.1.js")
+    @Scripts.Render("~/JS-SQFile.js")
+    @Scripts.Render("~/Scripts/bootstrap.js")
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+    <form id="form1" class="container">
+        @*First  menu*@
+        <nav class="navbar navbar-expand-lg navbar-light " id="first-nav">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link", id = "home-logo" })
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUs" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            About Us
+                        </a>
+                        <div class="dropdown-menu">
+                            @*<a class="dropdown-item" href="#">Goodlife Difference</a>*@
+                            @Html.ActionLink("Goodlife Difference", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("New Clubs Coming Soon", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Careers", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Personal Training", "Index", "Home", new { @class = "dropdown-item" })
+
+                        </div>
+                    </li>
+                    <li class="nav-item">@Html.ActionLink("Join Now", "Index", "Home", new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Clubs", "Index", "Home", new { @class = "nav-link" }) </li>
+
+                    <li class="nav-item active">
+                        <a href="@Url.Action("Index", "Home")" class="nav-link">Classes<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="programs" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Programs
+                        </a>
+                        <div class="dropdown-menu">
+                            @Html.ActionLink("8 Week Challenge", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("12 Week Challenge", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Championship Series By Arena Fitness", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Fit Series by Arena Fitness", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("G4", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Fitter Faster Stronger Pre-Season", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Small Group Training", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("HYPOXI", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Goodlife Game", "Index", "Home", new { @class = "dropdown-item" })
+                        </div>
+                    </li>
+                    <li class="nav-item"> @Html.ActionLink("Timetable", "Index", "Home", new { @class = "nav-link" })</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blog" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu">
+                            @Html.ActionLink("Day in the Goodlife", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Fitness", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Find Your Thing", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Food", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Humans of Goodlife", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Members Month", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Motivation", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("The Good Fit", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("The Biggest Loser", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Workouts", "Index", "Home", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Moments of Magic", "Index", "Home", new { @class = "dropdown-item" })
+                        </div>
+                    </li>
+                </ul>
+                <div class="form-inline ml-auto">
+                    <input type="search" id="textSearch" class="btn-sm text" placeholder="Search" maxlength="50" />
+                    <script>$(document).ready(extendSearchBar()); document.getElementById("textSearch").addEventListener("change", Search)</script>
+                </div>
+            </div>
+        </nav>
+        @*Second  menu*@
+        <nav class="navbar navbar-expand-lg" id="second-nav">
+            <a class="nav-item nav-link " href="#">Select club</a>
+            <div class="navbar-nav ml-auto">
+                <div id="login-form" style="display: none">
+                    <input type="text" id="username" placeholder="Enter your Username" maxlength="50">
+                    <input type="password" id="password" placeholder="Enter your password" maxlength="50">
+                </div>
+                <button id="sign-in" type="button">Sign in</button>
+                <script>document.getElementById("sign-in").addEventListener("click", showLoginForm)</script>
+            </div>
+        </nav>
+
+        <main>
+            @RenderBody()
+        </main>
+
+        @*Footer*@
+        <footer class="pt-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>SUPPORT</h5>
+                        <ul class="list-unstyled">
+                            <li>@Html.ActionLink("contact support office", "Index", "Home")</li>
+                            <li>@Html.ActionLink("contact a club", "Index", "Home")</li>
+                            <li>@Html.ActionLink("faq", "Index", "Home")</li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-1"><i class="far fa-envelope"></i></div>
+                                    <div class="col-10">@Html.ActionLink("Send an enquiry", "Index", "Home")</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>Corporate</h5>
+                        <ul class="list-unstyled">
+                            <li>@Html.ActionLink("corporate partnerships", "Index", "Home")</li>
+                            <li>@Html.ActionLink("media enquiries", "Index", "Home")</li>
+                            <li>@Html.ActionLink("study with us", "Index", "Home")</li>
+                            <li>@Html.ActionLink("careers", "Index", "Home")</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>legal</h5>
+                        <ul class="list-unstyled">
+                            <li>@Html.ActionLink("terms & conditions", "Index", "Home")</li>
+                            <li>@Html.ActionLink("privacy policy", "Index", "Home")</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>CONNECT WITH US</h5>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email" id="email" maxlength="50">
+                            <button id="subscribebtn" type="button" onclick="subscribeEmail()">Subscribe</button>
+                        </div>
+                        <ul class="social-pet mt-4">
+                            <li>
+                                <a href="@Url.Action("Index", "Home")" title="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Home")" title="twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Index", "Home")" title="instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+
+</body>
+</html>

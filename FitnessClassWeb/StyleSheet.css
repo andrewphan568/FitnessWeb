@@ -1,0 +1,284 @@
+﻿
+body {
+    background-color: #000000;
+    color: white;
+}
+
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#first-nav {
+    color: black;
+    background-color: #ECECEC;
+    text-align: center;
+    padding-right: 0.9rem !important;
+    padding-left: 0.9rem !important;
+}
+
+#second-nav {
+    color: white;
+    background-color: #2AC4F4;
+    height: 40px;
+}
+/*Show the dropdown menu on hover*/
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/*CSS3 Transition/Animation*/
+/*Flip classes-ad - references:https://bashooka.com/coding/40-css-text-image-animation-examples/*/ /*CSS3 Transition/Animation*/
+#flip-ad {
+    font-size: 32px;
+    text-align: center;
+    height: 50px;
+    overflow: hidden;
+    text-transform: uppercase;
+    margin: 0.4em 0;
+}
+
+    #flip-ad > div > div {
+        color: #fff;
+        height: 45px;
+        margin-bottom: 45px;
+        display: inline-block;
+    }
+
+    #flip-ad div:first-child {
+        animation: show 5s linear infinite;
+    }
+
+    #flip-ad div div {
+        background: #42c58a;
+    }
+
+    #flip-ad div:first-child div {
+        background: #4ec7f3;
+    }
+
+    #flip-ad div:last-child div {
+        background: #DC143C;
+    }
+
+@keyframes show {
+    0% {
+        margin-top: -270px;
+    }
+
+    5% {
+        margin-top: -180px;
+    }
+
+    33% {
+        margin-top: -180px;
+    }
+
+    38% {
+        margin-top: -90px;
+    }
+
+    66% {
+        margin-top: -90px;
+    }
+
+    71% {
+        margin-top: 0px;
+    }
+
+    99.99% {
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: -270px;
+    }
+}
+/*End- flip classes-ad*/
+.col-3.mx-1.my-1.classesListing {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-3 {
+    flex: 0 0 32%;
+    max-width: 34%;
+}
+
+.nav-item {
+    text-transform: uppercase;
+}
+
+.dropdown-item {
+    text-transform: capitalize;
+}
+
+a {
+    color: white;
+}
+
+#home-logo {
+    text-indent: -9999px;
+    background: url('../images/logo/logo-nav.jpg') no-repeat scroll right center transparent;
+    width: 130px;
+    float: left;
+}
+
+.classesListing {
+    height: 370px;
+    width: 800px;
+    background-color: #2AC4F4;
+    overflow: hidden;
+}
+
+    .classesListing p {
+        font-family: Lato, sans-serif;
+        font-size: 20px;
+        line-height: 1.42857143;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+.img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.centeredTitle {
+    position: absolute;
+    top: 60px;
+    height: 143px;
+    width: 410px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+h3 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-family: Lato Black, Arial, sans-serif;
+}
+
+.classText {
+    font-family: Lato, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px;
+}
+
+/*CSS3 Transition/Animation*/
+/*CSS Transitions for find-out-more button*/
+.btn:hover {
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.find-out-button {
+    color: white;
+    border: 1px solid white;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+#goal-button {
+    color: white;
+    border: 1px solid white;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+
+
+#subscribebtn {
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+#textSearch {
+    border: none;
+}
+
+#login-form {
+    border: none;
+}
+
+#sign-in {
+    margin-left: 7px;
+    background-color: Transparent;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+}
+
+.decoration {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: Roboto, Lato, sans-serif;
+    font-weight: 500;
+    margin: 0.5em 0 0.2em 0;
+}
+
+/* start-----------------footer------------------------*/
+footer {
+    text-transform: uppercase;
+}
+
+    footer a {
+        color: #ccc !important;
+        transition: color 1s, font-size 1s;
+    }
+
+        footer a:hover {
+            color: #007bff !important;
+            font-size: 1.2rem;
+        }
+/*start-social icon button - reference: https://mdbootstrap.com/docs/jquery/components/buttons-social/*/
+.social-pet li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+    .social-pet li a {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        text-align: center;
+        display: block;
+        line-height: 35px;
+        background-color: #3a5a95;
+        color: #fff;
+    }
+
+    .social-pet li:nth-child(2) a {
+        background-color: #57aced;
+    }
+
+    .social-pet li:nth-child(3) a {
+        background-color: #dd4f43;
+    }
+
+    .social-pet li:nth-child(4) a {
+        background-color: #6b27b2;
+    }
+
+    .social-pet li a:hover {
+        background-color: #0141a2;
+    }
+/*end-social icon button*/
+
+/* end-----------------footer------------------------*/

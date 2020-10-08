@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FitnessClassWeb.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <%--Social icon css--%>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <script src="/Scripts/jquery-3.4.1.js"></script>
+    <script src="JS-SQFile.js"></script>
+    <script src="/Scripts/bootstrap.js"></script>
+    <title><%: Page.Title %></title>
+    <asp:ContentPlaceHolder ID="CPHead" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server" class="container">
+        <%--first  menu--%>
+        <nav class="navbar navbar-expand-lg navbar-light " id="first-nav">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" id="home-logo" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutUs" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">About Us
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Goodlife Difference</a>
+                            <a class="dropdown-item" href="#">New Clubs Coming Soon</a>
+                            <a class="dropdown-item" href="#">Careers</a>
+                            <a class="dropdown-item" href="#">Personal Training</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Join Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Clubs</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">Classes<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="programs" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Programs
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">8 Week Challenge</a>
+                            <a class="dropdown-item" href="#">12 Week Challenge</a>
+                            <a class="dropdown-item" href="#">Championship Series By Arena Fitness</a>
+                            <a class="dropdown-item" href="#">Fit Series by Arena Fitness</a>
+                            <a class="dropdown-item" href="#">G4</a>
+                            <a class="dropdown-item" href="#">Fitter Faster Stronger Pre-Season</a>
+                            <a class="dropdown-item" href="#">Small Group Training</a>
+                            <a class="dropdown-item" href="#">HYPOXI </a>
+                            <a class="dropdown-item" href="#">Goodlife Games</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Timetable</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blog" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Blog
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Day in the Goodlife</a>
+                            <a class="dropdown-item" href="#">Fitness</a>
+                            <a class="dropdown-item" href="#">Find Your Thing</a>
+                            <a class="dropdown-item" href="#">Food</a>
+                            <a class="dropdown-item" href="#">Humans of Goodlife</a>
+                            <a class="dropdown-item" href="#">Members Month</a>
+                            <a class="dropdown-item" href="#">Motivation</a>
+                            <a class="dropdown-item" href="#">The Good Fit</a>
+                            <a class="dropdown-item" href="#">The Biggest Loser</a>
+                            <a class="dropdown-item" href="#">Workouts</a>
+                            <a class="dropdown-item" href="#">Moments of Magic</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="form-inline ml-auto">
+                    <input type="search" id="textSearch" class="btn-sm text" placeholder="Search" maxlength="50" />
+                    <script>$(document).ready(extendSearchBar())
+                        document.getElementById("textSearch").addEventListener("change", Search)
+                    </script>
+                </div>
+            </div>
+        </nav>
+        <%--Second  menu--%>
+        <nav class="navbar navbar-expand-lg" id="second-nav">
+            <a class="nav-item nav-link " href="#">Select club</a>
+            <div class="navbar-nav ml-auto">
+                <div id="login-form" style="display: none">
+                    <input type="text" id="username" placeholder="Enter your Username" maxlength="50">
+                    <input type="password" id="password" placeholder="Enter your password" maxlength="50">
+                </div>
+                <button id="sign-in" type="button">Sign in</button>
+                <script>document.getElementById("sign-in").addEventListener("click", showLoginForm)</script>
+            </div>
+        </nav>
+        <main>
+            <asp:ContentPlaceHolder ID="CPBody" runat="server">
+                <h2 class="text-center">Page Under Construction</h2>
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <%-- Footer--%>
+        <footer class="pt-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>SUPPORT</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">contact support office</a></li>
+                            <li><a href="#">contact a club</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-1"><i class="far fa-envelope"></i></div>
+                                    <div class="col-10">
+                                        <a href="#">Send an enquiry</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>Corporate</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">corporate partnerships</a></li>
+                            <li><a href="#">media enquiries</a></li>
+                            <li><a href="#">study with us</a></li>
+                            <li><a href="#">careers</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">terms & conditions</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                        <h5>CONNECT WITH US</h5>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email" id="email" maxlength="50">
+                            <button id="subscribebtn" type="button" onclick="subscribeEmail()">Subscribe</button>
+                        </div>
+                        <ul class="social-pet mt-4">
+                            <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+    <asp:ContentPlaceHolder ID="CPScripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

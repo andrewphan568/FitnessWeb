@@ -1,0 +1,64 @@
+﻿@model FitnessClassWeb.Models.MVC.FitnessClasses
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FitnessClasses</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.classTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thumbnail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thumbnail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.image)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

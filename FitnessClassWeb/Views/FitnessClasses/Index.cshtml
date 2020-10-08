@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FitnessClassWeb.Models.MVC.FitnessClasses>
+
+<div id="classes-ad">
+    <h1 class="decoration text-center">Classes</h1>
+    <div id="flip-ad">
+        <div>
+            <div>Any Purpose</div>
+        </div>
+        <div>
+            <div>Any Age</div>
+        </div>
+        <div>
+            <div>Any Job</div>
+        </div>
+    </div>
+</div>
+
+<p class="text-center">
+    <input type="button" class="btn btn-sm " id="goal-button" value="Filter By Goal">
+</p>
+
+<script>
+    $(document).ready(expandGoalButton());
+</script>
+
+<div class="row justify-content-center" id="contentBody">
+    @*add image HTML*@
+    @foreach (var FClass in Model)
+    {
+        <div class="col-3 mx-1 my-1 classesListing">
+            <div class="pictures">
+                <img src="@Url.Content(FClass.image)" alt="image" class="img" />
+                <div class="centeredTitle">
+                    <h3>@Html.DisplayFor(modelFClass => FClass.classTitle)</h3>
+                </div>
+            </div>
+            @*Class Description go here*@
+            <p class="classText">
+                @(FClass.classDescription.Length > 110 ? (FClass.classDescription.Substring(0, 110) + "...") : (FClass.classDescription))
+            </p>
+
+
+            <p class="text-center">
+                <a class="btn btn-sm find-out-button" href="#" role="button">find out more</a>
+            </p>
+        </div>
+    }
+</div>

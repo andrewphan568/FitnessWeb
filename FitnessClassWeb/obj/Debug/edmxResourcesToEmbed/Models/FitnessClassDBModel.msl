@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FitnessClassDatabaseModelStoreContainer" CdmEntityContainer="FitnessClassDatabaseEntities">
+    <EntitySetMapping Name="FitnessClasses1">
+      <EntityTypeMapping TypeName="FitnessClassDatabaseModel.FitnessClasses">
+        <MappingFragment StoreEntitySet="FitnessClasses">
+          <ScalarProperty Name="classID" ColumnName="classID" />
+          <ScalarProperty Name="classTitle" ColumnName="classTitle" />
+          <ScalarProperty Name="classDescription" ColumnName="classDescription" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="thumbnail" ColumnName="thumbnail" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

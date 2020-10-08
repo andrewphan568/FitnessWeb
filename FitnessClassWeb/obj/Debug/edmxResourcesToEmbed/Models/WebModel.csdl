@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FitnessClassDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FitnessClass">
+    <Key>
+      <PropertyRef Name="classID" />
+    </Key>
+    <Property Name="classID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="classTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="classDescription" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="active" Type="Boolean" Nullable="false" />
+    <Property Name="thumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="image" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FitnessClassDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FitnessClasses" EntityType="FitnessClassDBModel.FitnessClass" />
+  </EntityContainer>
+</Schema>
